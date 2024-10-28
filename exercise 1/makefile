@@ -1,14 +1,14 @@
 # Target to compile the object file
-source: source.o
-	g++ source.o -o source.exe
+Source: Source.o
+	g++ Source.o -o Source.exe
 
 # Target to compile the C++ program
-source.o: source.cpp
-	g++ -c source.cpp -o source.o
+Source.o: Source.cpp
+	g++ -c Source.cpp -o Source.o
 
 # Target to run the program (interactively)
-run: source
-	./source.exe
+run: Source
+	./Source.exe
 
 # Target to compile the object Test file
 test: test.o
@@ -24,4 +24,4 @@ test: test
 
 # Target to clean up compiled files
 clean:
-	rm -f source.o test.o source.exe test.exe
+	rm -f Source.o test.o Source.exe test.exe
