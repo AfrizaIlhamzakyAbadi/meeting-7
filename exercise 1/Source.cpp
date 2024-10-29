@@ -1,5 +1,3 @@
-#include <cassert>
-//#include <cstdlb>
 #include <iostream>
 using namespace std;
 int n;
@@ -14,22 +12,11 @@ int f(int x)
 		return x * f(x - 1);
 	}
 }
-int test_f()
-{
-#ifdef NDEBUG
-	cerr << "Tests run with NDEBUG defined (asserts compiled out)";
-	abort();
-#endif
-	assert(f(0) == 1);
-	assert(f(1) == 1);
-	assert(f(2) == 2);
-	assert(f(3) == 6);
-	assert(f(5) == 120);
-	cout << "All tests succeeded.\n";
-	return 0;
-}
 int main()
 {
-	test_f();
+	cout << "FACTORIAL OPERATION\n" << "To find n!, n is a whole number, input the value of n.\n";
+	cout << "n = ";
+	cin >> n;
+	cout << "n! = " << f(n);
 	return 0;
 }
