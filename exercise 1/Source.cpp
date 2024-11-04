@@ -9,7 +9,8 @@ int f(int x)
 	}
 	else
 	{
-		return x * f(x - 1);
+		long int F = x * f(x - 1);
+		return F;
 	}
 }
 int main()
