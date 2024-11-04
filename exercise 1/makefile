@@ -11,17 +11,17 @@ run: Source
 	./Source.exe
 
 # Target to compile the object Test file
-test: test.o
-	g++ test.o -o test.exe
+SourceTest: SourceTest.o
+	g++ SourceTest.o -o SourceTest.exe
 
 # Target to compile the C++ Test program
-test.o: test.cpp
-	g++ -c test.cpp -o test.o
+SourceTest.o: SourceTest.cpp
+	g++ -c SourceTest.cpp -o SourceTest.o
 
 # Target to run the Test program
-test: test
-	./test.exe
+test: SourceTest
+	./SourceTest.exe
 
 # Target to clean up compiled files
 clean:
-	rm -f Source.o test.o Source.exe test.exe
+	rm -f Source.o SourceTest.o Source.exe SourceTest.exe
